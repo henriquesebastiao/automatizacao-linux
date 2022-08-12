@@ -58,6 +58,6 @@ sudo snap install slack --classic
 sudo snap install authy
 sudo snap install winbox
 
-sudo apt update && sudo apt dist-upgrade
+sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
 
 echo "Chegamos ao final."
