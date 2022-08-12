@@ -11,16 +11,16 @@ mkdir /home/$USER/Downloads/ProgramasShell
 
 cd /home/$USER/Downloads/ProgramasShell
 
-## Dowload do Chrome ##
+## Download do Chrome ##
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 ## Download do Discord ##
 wget -c https://dl.discordapp.net/apps/linux/0.0.19/discord-0.0.19.deb
 
-## Dowload Google Earth ##
+## Download Google Earth ##
 wget -c https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
 
-## Dowload VS Code ##
+## Download VS Code ##
 wget -c https://az764295.vo.msecnd.net/stable/6d9b74a70ca9c7733b29f0456fd8195364076dda/code_1.70.1-1660113095_amd64.deb
 
 ## Instalando todos os arquivos .deb baixados ##
