@@ -11,23 +11,22 @@ mkdir /home/$USER/Downloads/ProgramasShell
 
 cd /home/$USER/Downloads/ProgramasShell
 
-## Download do Chrome ##
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-## Download do Discord ##
 wget -c https://dl.discordapp.net/apps/linux/0.0.19/discord-0.0.19.deb
-
-## Download Google Earth ##
 wget -c https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
-
-## Download VS Code ##
 wget -c https://az764295.vo.msecnd.net/stable/6d9b74a70ca9c7733b29f0456fd8195364076dda/code_1.70.1-1660113095_amd64.deb
 
 ## Instalando todos os arquivos .deb baixados ##
 sudo dpkg -i *.deb
 
-## Adicionando repositório de drivers gráficos ##
-sudo apt-add-repository ppa:graphics-drivers/ppa && sudo apt update
+## Atualizando o repositório, chacando dependencias e satisfazendo-as ##
+sudo apt update && sudo apt upgrade
+sudo apt-get update && sudo apt-get check && apt-get upgrade
+
+## Adicionando repositórios PPA ##
+sudo apt-add-repository ppa:graphics-drivers/ppa
+sudo add-apt-repository ppa:inkscape.dev/stable
+## sudo add-apt-repository ppa:libreoffice/ppa ##
 
 ## Instalando todos os codecs necessários para o Ubuntu ##
 sudo apt install ubuntu-restricted-extras
@@ -47,17 +46,27 @@ flatpak install flathub org.gnome.Calendar
 flatpak install flathub org.gnome.design.Contrast
 flatpak install flathub org.telegram.desktop
 flatpak install flathub org.mozilla.firefox
+flatpak install flathub com.slack.Slack
+flatpak install flathub io.github.Figma_Linux.figma_linux
+flatpak install flathub org.videolan.VLC
+flatpak install flathub org.gimp.GIMP
+flatpak install flathub org.qbittorrent.qBittorrent
 
 ## Instalando apps por apt install ##
+sudo apt install git
+sudo apt install inkscape
 sudo apt install virtualbox
 sudo apt install htop
 sudo apt install snapd
+## pip, pip3, python3 ##
 
 ## Instalando apps por snap ##
-sudo snap install slack --classic
 sudo snap install authy
 sudo snap install winbox
+sudo snap install visualg
 
 sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
 
-echo "Chegamos ao final."
+echo "CONCLUÍDO!"
+
+## Atualizações futuras do script vão incluir: Tor Browser ##
