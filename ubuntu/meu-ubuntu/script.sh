@@ -11,22 +11,23 @@ mkdir /home/$USER/Downloads/ProgramasShell
 
 cd /home/$USER/Downloads/ProgramasShell
 
-wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-wget -c https://dl.discordapp.net/apps/linux/0.0.19/discord-0.0.19.deb
 wget -c https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
-wget -c https://az764295.vo.msecnd.net/stable/6d9b74a70ca9c7733b29f0456fd8195364076dda/code_1.70.1-1660113095_amd64.deb
 
 ## Instalando todos os arquivos .deb baixados ##
 sudo dpkg -i *.deb
+
+## Voltando para o diretório $USER ##
+
+cd ..
+cd ..
 
 ## Atualizando o repositório, chacando dependencias e satisfazendo-as ##
 sudo apt update && sudo apt upgrade
 sudo apt-get update && sudo apt-get check && apt-get upgrade
 
 ## Adicionando repositórios PPA ##
-sudo apt-add-repository ppa:graphics-drivers/ppa
 sudo add-apt-repository ppa:inkscape.dev/stable
-## sudo add-apt-repository ppa:libreoffice/ppa ##
+sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
 
 ## Instalando todos os codecs necessários para o Ubuntu ##
 sudo apt install ubuntu-restricted-extras
@@ -51,22 +52,33 @@ flatpak install flathub io.github.Figma_Linux.figma_linux
 flatpak install flathub org.videolan.VLC
 flatpak install flathub org.gimp.GIMP
 flatpak install flathub org.qbittorrent.qBittorrent
+flatpak install flathub org.libreoffice.LibreOffice
+flatpak install flathub com.google.Chrome
+flatpak install flathub com.discordapp.Discord
+flatpak install flathub com.visualstudio.code
+flatpak install flathub org.stellarium.Stellarium
+flatpak install flathub ua.org.brezblock.q4wine
+flatpak install flathub com.github.micahflee.torbrowser-launcher
 
 ## Instalando apps por apt install ##
+sudo apt install qbittorrent
 sudo apt install git
 sudo apt install inkscape
 sudo apt install virtualbox
 sudo apt install htop
 sudo apt install snapd
-## pip, pip3, python3 ##
+sudo apt install unzip
+sudo apt install wine
+sudo apt install gcc
+sudo apt install python3
+sudo apt install python3-pip
 
 ## Instalando apps por snap ##
 sudo snap install authy
 sudo snap install winbox
 sudo snap install visualg
+sudo snap install notion-snap
 
 sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
 
 echo "CONCLUÍDO!"
-
-## Atualizações futuras do script vão incluir: Tor Browser ##
