@@ -72,6 +72,8 @@ sudo apt install wine
 sudo apt install gcc
 sudo apt install python3
 sudo apt install python3-pip
+sudo apt install php
+sudo apt install neofetch
 
 ## Instalando apps por snap ##
 sudo snap install authy
